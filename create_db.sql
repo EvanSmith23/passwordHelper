@@ -1,8 +1,9 @@
-use testdb;
+use passwordHelper;
 
 create table users (
 	firstname varchar(40),
 	lastname varchar(40),
+	website varchar(40),
 	question1 varchar(40),
 	answer1 varchar(40),
 	question2 varchar(40),

@@ -17,29 +17,35 @@ def index():
 		return render_template("createUser.html", **options)
 
 	elif request.method == 'POST':
-	   	firstname = request.form['firstname']
-	   	lastname = request.form['lastname']
-	   	question1 = request.form['question1']
-	   	answer1 = request.form['answer1']
-	   	question2 = request.form['question2']
-	   	answer2 = request.form['answer2']
-	   	question3 = request.form['question3']
-	   	answer3 = request.form['answer3']
+	   	firstname1 = request.form['firstname']
+	   	lastname1 = request.form['lastname']
+	   	website1 = request.form['website']
+	   	question_1 = request.form['question1']
+	   	answer_1 = request.form['answer1']
+	   	question_2 = request.form['question2']
+	   	answer_2 = request.form['answer2']
+	   	question_3 = request.form['question3']
+	   	answer_3 = request.form['answer3']
 
-		query = 'UPDATE users SET firstname=%s, lastname=%s, question1=%s, answer1=%s, question2=%s, answer2=%s, question3=%s, answer3=%s WHERE firstname=%s'
+	   	# query is wrong, nothing in database, maybe syntax or maybe not connecting to database, try simpler checks to see fi connected to db
+
+		query = 'INSERT INTO users (firstname,lastname,website,question1,answer1,question2,answer2,question3,answer3) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 		cur = db.cursor()
-		cur.execute(query, (firstname,lastname,question1,answer1,question2,answer2,question3,answer3,firstname, ) )
+		cur.execute(query, (firstname1,lastname1,website1,question_1,answer_1,question_2,answer_2,question_3,answer_3) )
 		result = cur.fetchall()
 
+		# Do I need to fetch if I'm just updating
+
 		options = {
-			"firstname" : firstname,
-			"lastname" : lastname,
-			"question1" : question1,
-			"answer1" : answer1,
-			"question2" : question2,
-			"answer2" : answer2,
-			"question3" : question3,
-			"answer3" : answer3
+			"firstname" : firstname1,
+			"lastname" : lastname1,
+			"website" : website1,
+			"question1" : question_1,
+			"answer1" : answer_1,
+			"question2" : question_2,
+			"answer2" : answer_2,
+			"question3" : question_3,
+			"answer3" : answer_3
 		}
 		return render_template("createUser.html", **options)
  

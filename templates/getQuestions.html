@@ -34,18 +34,18 @@
 
 			<strong><p>Forgotten Password Question Helper</p></strong>
 			<form action="http://127.0.0.1:3000/" method="POST">
-				First name:<br>
-				<input type="text" name="firstname"><br>
-				Last name:<br>
-				<input type="text" name="lastname"><br>
+				First name: <input type="text" name="firstname"><br>
+				Last name: <input type="text" name="lastname"><br>
+				Website: <input type="text" name="website"><br>
 				<input type="submit" value="Submit">
 				<a href="http://127.0.0.1:3000/user"><input type="button" value="Not a User Yet"></a>
 			</form>
 			<br>
-			<p> {{ firstname }} : {{ lastname }} </p><br>
-      		<p> {{ question1 }} : {{ answer1 }} </p><br>
-      		<p> {{ question2 }} : {{ answer2 }} </p><br>
-      		<p> {{ question3 }} : {{ answer3 }} </p><br>
+			<p> {{ firstname }}  {{ lastname }} </p><br>
+			<p> {{ website }} </p><br>
+      		<p> {{ question1 }}  {{ answer1 }} </p><br>
+      		<p> {{ question2 }}  {{ answer2 }} </p><br>
+      		<p> {{ question3 }}  {{ answer3 }} </p><br>
 		</div>
 	</body>
 </html>
