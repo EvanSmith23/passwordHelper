@@ -12,11 +12,19 @@ def index():
 	if request.method == 'GET':    
 		options = {
 			"firstname" : "First Name",
-			"lastname" : "Last Name"
+			"lastname" : "Last Name",
+			"question1" : "question1",
+			"answer1" : "answer1",
+			"question2" : "question2",
+			"answer2" : "answer2",
+			"question3" : "question3",
+			"answer3" : "answer3"
+
 		}
 		return render_template("createUser.html", **options)
 
 	elif request.method == 'POST':
+		
 	   	firstname1 = request.form['firstname']
 	   	lastname1 = request.form['lastname']
 	   	website1 = request.form['website']

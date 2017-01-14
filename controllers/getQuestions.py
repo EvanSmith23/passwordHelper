@@ -12,8 +12,8 @@ db = connect_to_database()
 def index():
   if request.method == 'GET':
     options = {
-      "firstname" : "First Name",
-      "lastname" : "Last Name"
+      "firstname" : "",
+      "lastname" : ""
     }
     return render_template("getQuestions.html", **options)
 

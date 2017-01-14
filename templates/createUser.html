@@ -19,74 +19,81 @@
 
   		<style>
   			#mainDiv {
-
-  				padding-left : 30px;
-  				padding-top : 30px;
-  				font-size : 20px;
+  				background-color : rgb(295,225,180);
+  			}
+  			#outsideDiv {
+  				background-color : rgb(150,150,150);
+  			}
+  			#outerDiv {
+  				background-color : rgb(100,100,100);
   			}
   		</style>
 
 	</head>
 	<body>
-		<div class="col-xs-6">
+		<center>
+		<div id="outerDiv" class="col-sm-12">
+			<div id="outsideDiv" class="col-sm-12">
+				<div id="mainDiv" class="col-sm-12">
 
-			<p>Forgotten Password Question Helper</p>
-			<form>
-			  <div class="form-group">
-			    <label for="exampleFirstName">First Name</label>
-			    <input type="firstname" class="form-control" id="exampleFirstName" placeholder="John">
-			  </div>
-			  <div class="form-group">
-			    <label for="exampleLastName">Last Name</label>
-			    <input type="lastname" class="form-control" id="exampleLastName" placeholder="Smith">
-			  </div>
-			  <div class="form-group">
-			    <label for="exampleWebsite">Website</label>
-			    <input type="website" class="form-control" id="exampleWebsite" placeholder="Facebook">
-			  </div>
-			  <div class="form-group">
-			    <label for="Question1">Question #1</label>
-			    <input type="question1" class="form-control" id="Question1" placeholder="Kindergarten Teacher's Name">
-			  </div>
-			  <div class="form-group">
-			    <label for="Answer1">Answer #1</label>
-			    <input type="answer1" class="form-control" id="Answer1" placeholder="Ms. Temple">
-			  </div>
-			  <div class="form-group">
-			    <label for="Question2">Question #2</label>
-			    <input type="question2" class="form-control" id="Question2" placeholder="First Car's Automotive Maker">
-			  </div>
-			  <div class="form-group">
-			    <label for="Answer2">Answer #2</label>
-			    <input type="answer2" class="form-control" id="Answer2" placeholder="Saturn">
-			  </div>
-			  <div class="form-group">
-			    <label for="Question3">Question #3</label>
-			    <input type="question3" class="form-control" id="Question3" placeholder="Mom's Maiden Name">
-			  </div>
-			  <div class="form-group">
-			    <label for="Answer3">Answer #3</label>
-			    <input type="answer3" class="form-control" id="Answer3" placeholder="Brown">
-			  </div>
-			  <button type="submit" class="btn btn-default">Submit</button>
-
-			</form>
-
-			<form action="http://127.0.0.1:3000/user/" method="POST">
-				First name: <input type="text" name="firstname"><br>
-				Last name: <input type="text" name="lastname"><br>
-				Website: <input type="text" name="website"><br>
-				Q/A 1: <input type="text" name="question1"> <input type="text" name="answer1"><br>
-				Q/A 2: <input type="text" name="question2"> <input type="text" name="answer2"><br>
-				Q/A 3: <input type="text" name="question3"> <input type="text" name="answer3"><br>
-				<input type="submit" value="Submit">
-				<a href="http://127.0.0.1:3000/"><input type="button" value="Already a User"></a>
-				<br>
-			</form>
-      		<p> {{ firstname }} {{ lastname }} </p>
-      		<p> {{ question1 }} {{ answer1 }} </p>
-      		<p> {{ question2 }} {{ answer2 }} </p>
-      		<p> {{ question3 }} {{ answer3 }} </p>
+					<h3>Forgotten Password Question Helper</h3>
+					<form action="http://127.0.0.1:3000/user/" method="POST">
+					  <div class="form-group has-success has-feedback">
+					    <label class="col-sm-3" for="exampleFirstName">First Name:</label> 
+					    <div class="col-sm-9">
+						    <input name="firstname" class="form-control" id="exampleFirstName" placeholder="John">
+						</div>
+					  </div>
+					  <div class="form-group has-success has-feedback">
+					    <label class="col-sm-3" for="exampleLastName">Last Name:</label>
+					    <div class="col-sm-9">
+						    <input name="lastname" class="form-control" id="exampleLastName" placeholder="Smith">
+						</div>
+					  </div>
+					  <div class="form-group has-success has-feedback">
+					    <label class="col-sm-3" for="exampleWebsite">Website:</label>
+					    <div class="col-sm-9">
+						    <input name="website" class="form-control" id="exampleWebsite" placeholder="Facebook">
+						</div>
+					  </div>
+					  <div class="form-group has-success has-feedback">
+					    <label class="col-sm-3" for="Question1"> Question #1: </label>
+					    <div class="col-sm-9">
+					    	<input name="question1" class="form-control" id="Question1" placeholder="Kindergarten Teacher">
+					    </div>
+					    <label class="col-sm-3" for="Answer1"> Answer #1: </label>
+					    <div class="col-sm-9">
+					    	<input name="answer1" class="form-control" id="Answer1" placeholder="Ms. Temple">
+					    </div>
+					  </div>
+					  <div class="form-group has-success has-feedback">
+					    <label class="col-sm-3" for="Question2"> Question #2: </label>
+					    <div class="col-sm-9">
+						    <input name="question2" class="form-control" id="Question2" placeholder="First Car's Maker">
+						</div>
+					    <label class="col-sm-3" for="Answer2"> Answer #2: </label>
+					    <div class="col-sm-9">
+					    	<input name="answer2" class="form-control" id="Answer2" placeholder="Saturn">
+					    </div>
+					  </div>
+					  <div class="form-group has-success has-feedback">
+					    <label class="col-sm-3" for="Question3"> Question #3: </label>
+					    <div class="col-sm-9">
+						    <input name="question3" class="form-control" id="Question3" placeholder="Mom's Maiden Name">
+						</div>
+					    <label class="col-sm-3" for="Answer3"> Answer #3: </label>
+					    <div class="col-sm-9">
+						    <input name="answer3" class="form-control" id="Answer3" placeholder="Brown">
+						</div>
+					  </div>
+					  <div class="form-group">
+						  <input value="Submit" type="submit"></input>
+						  <a href="http://127.0.0.1:3000/"><input type="button" value="Home"></input></a>
+					  </div>
+					</form>
+				</div>
+			</div>
 		</div>
+		</center>
 	</body>
 </html>
