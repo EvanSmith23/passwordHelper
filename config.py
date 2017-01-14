@@ -3,5 +3,5 @@ env = dict(
   port = 3000,
   user = 'root',
   password = 'newpass',
-  db = '',
+  db = 'testdb',
 )

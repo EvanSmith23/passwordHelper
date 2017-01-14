@@ -16,9 +16,8 @@ def index():
       "lastname" : "Last Name"
     }
     return render_template("getQuestions.html", **options)
-  
+
   elif request.method == 'POST':
-    
     firstname=request.form['firstname']
 
     query = 'SELECT * FROM users WHERE firstname=%s'
@@ -26,8 +25,10 @@ def index():
     cur.execute(query, (firstname, ) )
     result = cur.fetchall()
 
-    firstname = result[0]['firstname']
+    firstname = result['firstname']
+    print firstname
     lastname = result[0]['lastname']
+    print lastname
     question1 = result[0]['question1']
     answer1 = result[0]['answer1']
     question2 = result[0]['question2']
@@ -46,13 +47,3 @@ def index():
       "answer3" : answer
     }
     return render_template("getQuestions.html", **options)
-
-
-
-
-    query = 'select firstname, lastname, username from user'
-    cur = db.cursor()
-    cur.execute(query)
-    result = cur.fetchall()
-    #make sure to pass the data to the template :)
-    return render_template("index.html", users=result)

@@ -33,9 +33,20 @@
 		<div id="mainDiv">
 
 			<p>Forgotten Password Question Helper</p>
-			
-			<br>
+			<form action="http://127.0.0.1:3000/user/" method="POST">
+				First name: <input type="text" name="firstname"><br>
+				Last name: <input type="text" name="lastname"><br>
+				Q/A 1: <input type="text" name="question1"> <input type="text" name="answer1"><br>
+				Q/A 2: <input type="text" name="question2"> <input type="text" name="answer2"><br>
+				Q/A 3: <input type="text" name="question3"> <input type="text" name="answer3"><br>
+				<input type="submit" value="Submit">
+				<a href="http://127.0.0.1:3000/"><input type="button" value="Already a User"></a>
+				<br>
+			</form>
       		<p> {{ firstname }} {{ lastname }} </p>
+      		<p> {{ question1 }} {{ answer1 }} </p>
+      		<p> {{ question2 }} {{ answer2 }} </p>
+      		<p> {{ question3 }} {{ answer3 }} </p>
 		</div>
 	</body>
 </html>
