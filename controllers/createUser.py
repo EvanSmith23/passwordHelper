@@ -5,7 +5,7 @@ from extensions import connect_to_database
 db = connect_to_database()
 
 # app = Flask(__name__)
-createUser = Blueprint('createUser', __name__, template_folder='htmlFiles')
+createUser = Blueprint('createUser', __name__, template_folder='templates')
 
 @createUser.route('/user/', methods = ['GET','POST'])
 def index():

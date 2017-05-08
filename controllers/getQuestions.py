@@ -1,10 +1,10 @@
 #!flask/bin/python
 from flask import Flask, Blueprint, request, render_template
 from extensions import connect_to_database
-import pymysql
+import MySQLdb
 
 # app = Flask(__name__)
-getQuestions = Blueprint('getQuestions', __name__, template_folder='htmlFiles')
+getQuestions = Blueprint('getQuestions', __name__, template_folder='templates')
 
 db = connect_to_database()
 
